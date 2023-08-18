@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #container{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to top,rgba(64, 52, 53, 0.499)50%,rgba(64, 52, 52, 0.499)50% ), url(./My.jpg);
+            background-position: center;
+            background-size: cover;
+
+        }
+        .navbar{
+            width: 1200px;
+            height: 75px ;
+            margin: auto;
+        }
+        
+        .icon{
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+        #lo{
+            color: orange;
+            font-size: 30px;
+            font-family: Arial;
+            padding-left: 20px;
+            float: left;
+            padding-top: 10px;
+        }
+        .menu{
+           width: 400px ;
+           height: 30px;
+           float: left;
+           
+        }
+        .list1{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        .search{
+            width: 330px;
+            float: left;
+            margin-left: 270px;
+        }
+        #stc{
+            font-family: 'Times New Roman';
+            width: 200px;
+            height: 30px;
+            background-color: transparent;
+            border: solid 2px orange;
+            border-right:none ;
+            margin-top: 10px;
+            color: orange;
+            float: left;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-left-radius: 10px;
+
+
+        }
+        .bt{
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color: orange;
+            border-color: orange;
+            margin-top: 10px;
+            font-size: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        #container1{
+            width: 500px;
+            height: 350px;
+            background-color: transparent;
+            border-radius: 10px ;
+            position: absolute;
+            top: 20%;
+            left: 60%;
+         }
+         #login{
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    border-radius: 10px ;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    flex-direction: column;
+    
+
+}
+h1{
+    position: relative;
+    text-align: center;
+    top: 5px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px rgb(253, 252, 252);
+}
+#a{
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 7%;
+    margin-top: 5%;
+    padding-left: 20px;
+    border-radius: 20px 20px 20px 20px;
+    outline: none;
+    font-size: 13px;
+    /* position: absolute; */
+    
+
+}
+#b{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+}
+#c{
+    width: 40%;
+    height: 30px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    font-weight: bold;
+    border-radius: 20px 20px 20px 20px;
+    letter-spacing: 5px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    background-color: purple;
+    cursor: pointer;
+
+}
+    #container2{
+        width: 80%;
+        height: 40px;
+        position:absolute;
+        border: none;
+        border-radius: 5px;
+        padding-left: 20px;
+        margin-top: 2%;
+        margin-left: 7%;
+        display: flex;
+        border-radius: 20px 20px 20px 20px;
+        background-color: white;
+
+    }
+    #visible,#invisible{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        border: none;
+        top: 20%;
+        right: 10px;
+
+    }
+    #log{
+        color: rgb(251, 253, 252);
+    }
+    img{
+        width: 30px;
+        height: 30px;
+        /* position: absolute; */
+        cursor: pointer;
+    }
+    
+    #conte{
+       position: absolute;
+       bottom: 15%;
+       left: 30%;
+       font-size: 12px;
+       color: white;
+    }
+    #sugg{
+        position: absolute;
+       bottom: 15%;
+       left: 55%;
+       color: blue;
+       font-size: 12px;
+    }
+    #create{
+        width: 40%;
+        height: 40px;
+        background-color: aqua;
+        position: absolute;
+       bottom: 5px;
+       left: 30%;
+       letter-spacing: 2px;
+       border: none;
+       border-radius: 20px;
+       cursor: pointer;
+    }
+    #content{
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        width: 500px;
+        height: 400px;
+        position: absolute;
+        background-color: rgba(132, 131, 131, 0.33);
+        top: 33%;
+        left: 1%;
+        padding-left: 40px;
+        padding-right: 30px;
+        
+        /* filter: blur(2px); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: white;
+
+
+    }
+    #joinin{
+        position: absolute;
+        color: rgb(255, 166, 0);
+    }
+    #joinin:hover{
+        color: blue;
+        text-decoration: underline;
+    }
+    #head{
+        font: 70px;
+        color: rgb(252, 252, 252);
+        position: absolute;
+        top: 15%;
+        text-shadow: 2px 2px 5px rgb(3, 3, 3);
+
+    }
+    .li{
+        list-style: none;
+        padding-left: 40px;
+        margin-top: 20px;
+        color: aliceblue;
+        cursor: pointer;
+        font-weight: bold;
+        
+    }
+    .li:hover{
+        color: blue;
+        transition: 0.4s ease-in;
+    }
+    #g{
+        width: 300px;
+        height: 30px;
+        background-color: transparent;
+        position: absolute;
+        top: 160%;
+        display: flex;
+        letter-spacing: 2px;
+
+
+        justify-content: space-evenly;
+    }
+    i{
+        font-size: 30px;
+        color: orange;
+        cursor: pointer;
+
+    }
+    i:hover{
+        color: darkblue;
+        transform: scale(1.2);
+        transition: 0.4s ease-in;
+        
+    }
+    
+    #home:hover #sublist{
+            display: block;
+            
+        }
+        #info:hover #sublist{
+            display: block;
+            
+        }
+        #service:hover #sublist{
+            display: block;
+            
+        }
+        #contact:hover #sublist{
+            display: block;
+            
+        }
+        #about:hover #sublist{
+            display: block;
+            
+        }
+        
+        .fun:hover{
+            outline: 2px solid black;
+            color: rgb(255, 0, 0);
+            background-color: darkgray;
+        }
+        #sublist{
+            width: 50px;
+            height: 50px;
+            background-color:aquamarine;
+            display: none;
+            color: rgb(16, 16, 16);
+            list-style: none;
+            position: fixed;
+            /* margin-top: 10px; */
+            
+
+        }
+    .subIcons{
+    position: relative;
+    /* padding-left: 10px; */
+    text-align: center;
+    width: 100%;
+    height: 25px;
+    text-decoration: solid;
+    }
+    .fun{
+        width: 100%;
+        height: 25px;
+        cursor: pointer;
+        
+
+    }
+     #sub{
+        width: 300px;
+        height: 200px ;
+        position: absolute;
+        background-color: rgba(132, 131, 131, 0.33);
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        top: 15%;
+        /* z-index: 10px; */
+     }
+     #sub1{
+        width: 300px;
+        height: 200px ;
+        position: absolute;
+        background-color: rgba(132, 131, 131, 0.33);
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        top: 70%;
+        left: 35%;
+        /* z-index: 10px; */
+     }
+
+    </style>
+</head>
+<body id="container">
+    <div >
+        <div class="navbar">
+            <div class="icon">
+                <h1 id="lo">Rk</h1>
+                </div>
+                <div class="menu">
+                    <ul class="list1">
+                        <li class="li" id="home">Home
+                            <ul id="sublist">
+                                <li class="subIcons"><button class="fun" onclick="menuFun()">Menu</button></li>
+                                <li class="subIcons"><button class="fun" onclick="menuFun1()">Udemy</button></li>
+                            </ul>
+                            
+                        </li>
+                        <li class="li" id="info">Info
+                            <ul id="sublist">
+                                <li class="subIcons">M</li>
+                                <li class="subIcons">K</li>
+                            </ul>
+                        </li>
+                        <li class="li" id="service">Service
+                            <ul id="sublist">
+                                <li class="subIcons"><button></button></li>
+                                <li class="subIcons">K</li>
+                            </ul>
+                           
+                        </li>
+                        <li class="li" id="about">About
+                            <ul id="sublist">
+                                <li class="subIcons">M</li>
+                                <li class="subIcons">K</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input type="search" name="" id="stc" placeholder="Type here">
+                    <a href="#"><button class="bt">Search</button></a>
+                </div>
+                <div id="container1">
+                    <div id="login">
+                        <h1 id="log">Login Page</h1>
+                        <input id="a" type="text" placeholder="Enter the Email or Phone">
+                        <div id="container2">
+                            <input id="b" type="password" placeholder="Enter the password">
+                              <img id="visible" src="./visible.png" onclick="invisibleimg()" >
+                              <img id="invisible" src="./invisible.png" onclick="visibleimg()">
+                              <a href=""></a>
+                        </div>
+                        <button id="c" onclick="loginFun()">Submit</button>
+                        <div id="g">
+                            <a href="https://www.instagram.com/ratnakar.nani/"><i id="i" class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/ratnakarnani"><i id="f" class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.youtube.com"><i id="y" class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.twitter.com"><i id="t" class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <h6 id="conte">Forget the password?</h6><a id="sugg" href="https://www.google.com">Clickhere</a>
+                    <input type="button" id="create" value="Create an Account" onclick="createFun()">
+                </div>
+                <div id="content">
+                    <h2 id="head">Designing WebPage</h2>
+                    <br><br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fugit consequuntur rerum accusamus consectetur, minima reprehenderit fugiat quas itaque inventore. Quam similique aut voluptatum dolore ex nihil facere vero. <br> Veniam repellat, nam fugiat quisquam non omnis odio perspiciatis, ratione rem consequatur voluptas. Deleniti inventore nulla, amet nisi optio veniam nobis odit, vitae natus rerum atque aliquid magnam, voluptas adipisci tempore?<br> 
+                    <span id="join">for participate with us click <a id="joinin" href="https://www.udemy.com"> here</a></span>
+                
+                </p>
+                <a href=></a>
+                </div>
+                <div id="sub">
+                    
+                </div>
+                <div id="sub1"></div>
+        </div>
+        <a href=""></a>
+    </div>
+    <script>
+        function visibleimg(){
+    document.getElementById("b").type="text"
+    document.getElementById("invisible").style.display="none"
+}
+function invisibleimg(){
+    document.getElementById("b").type ="password"
+    document.getElementById("invisible").style.display="flex"
+}
+var inputTags=document.querySelectorAll("input")
+function loginFun(){
+    var userEmail=inputTags[1].value
+    var userPass=inputTags[2].value
+    var storEmail=localStorage.getItem("email");
+    var storPass=localStorage.getItem("pass");
+    if(userEmail==storEmail && userPass==storPass){
+        window.open("./index2.html")
+    }
+    else{
+        document.getElementById("message").innerHTML="UserId or Password incorrect"
+    }
+    
+}
+
+function createFun(){
+    window.open("./Signup.html")
+
+}
+function menuFun(){
+    window.open("./Home.html")
+}
+function menuFun1(){
+    window.open("./Spin.html")
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px ;
+            margin: 0px;
+
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(23, 2, 252, 0.456);
+        }
+        #container{
+            width: 100%;
+            height: 100vh;
+            background-color: transparent;
+            display: flex;
+        }
+        #signup{
+            width: 50%;
+            height: 100vh;
+            background-color:transparent;
+            /* position: absolute; */
+            
+        }
+        #sideimg{
+            width: 50%;
+            height: 100vh;
+            /* background-color: aquamarine; */
+            background-image: url(./coding.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100vh;
+        }
+        #datails{
+            width: 100%;
+            height: 50px;
+            background-color: transparent;
+            padding-left: 63px;
+            padding-top: 35px;
+
+            
+        }
+        #d{
+            width: 50%;
+            height: 200px;
+            background-color: transparent;
+            position: absolute;
+            display: flex;
+            top: 20%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nameInput{
+            width: 40%;
+            height: 40px;
+            font: 25px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            border: none;
+        }
+        .mailName{
+            width: 80%;
+            height: 40px;
+            font: 25px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            border: none;
+        }
+        #m{
+            position: absolute;
+            top: 55%;
+            left: 16%;
+            font-size: 17px;
+        }
+        #signupButt{
+            width: 100px;
+            height: 30px;
+            background-color: blueviolet;
+            position: absolute;
+            left: 21%;
+            bottom: 20%;
+            border-radius: 20px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            border: none;
+            cursor: pointer;
+        }
+        #n{
+            position: absolute;
+            bottom: 15%;
+            left: 16%;
+            font-size: 17px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="signup">
+            <div id="datails">
+                <input class="nameInput" type="text" placeholder="Enter the FirstName" required="*" >
+                <input class="nameInput" type="text" placeholder="Enter lastName" required="*" >
+                
+            </div>
+            <div id="d">
+                <input class="mailName" type="email" placeholder="Enter Email" required="*"><br>
+                <input class="mailName" type="password" placeholder="Enter Password"><br>
+                <input class="mailName" type="password" placeholder="Confirm Password">
+            </div>
+            
+            <span id="m"><input type="checkbox" > I accept terms of use & privacy policy</span>
+            <button type="submit" value="signup" id="signupButt" onclick="store()">Signup</button>
+            <span id="n">Already have an account click <a href="./index.html">here</a></span>
+            <a href="./index.html"></a>
+        </div>
+        <div id="sideimg"></div>
+
+    </div>
+    <script>
+        var allInput=document.querySelectorAll("input")
+        function store(){
+        var fName   =allInput[0].value
+        var lName   =allInput[1].value
+        var email   =allInput[2].value
+        var pass    =allInput[3].value
+        localStorage.setItem("fName",fName)
+        localStorage.setItem("lName",lName)
+        localStorage.setItem("email",email)
+        localStorage.setItem("pass",pass)
+        window.open("./index.html")
+    
+    }
+    </script>
+    
+</body>
+</html>
